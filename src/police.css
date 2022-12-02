@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Alata";
+    src: url("./Alata/Alata-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Quicksand";
+    src: url("./Quicksand/Quicksand-VariableFont_wght.ttf") format("truetype");
+  }
+
+  .quicksand{
+    font-family:Quicksand;
+  }
+
+  .alata{
+    font-family: Alata;
+  }

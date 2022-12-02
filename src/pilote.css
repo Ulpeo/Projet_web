@@ -1,0 +1,18 @@
+
+
+.pilote {
+    /*position: relative;*/
+    width: 350px;
+    height: 558px;
+    /*left: 560px;
+    top: 120px;*/
+
+    background: #FFFFFF;
+    box-shadow: 0px 9px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    
+    margin: 2%;
+    padding:2%;
+    padding-top: 1%;
+
+}

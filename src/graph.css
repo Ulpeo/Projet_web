@@ -1,0 +1,15 @@
+.graph {
+    /*position: relative;*/
+    width: 950px;
+    height: 303px;
+    /*left: 560px;
+    top: 728px;*/
+
+    background: #FFFFFF;
+    box-shadow: 0px 9px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    margin:2%;
+    padding:2%;
+    padding-top: 1%;
+}

@@ -1,0 +1,32 @@
+body {
+  background-color: #273460;
+}
+
+.test {
+  display: flex;
+  flex-wrap: nowwrap;
+  align-content: center;
+  align-items: baseline;
+  text-align: center;
+  font-size: large;
+  color: white;
+  
+  background-color: #273460;
+  padding: 0;
+  margin: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#set {
+  flex: 4%;
+  max-height: 5%;
+  max-width: 5%;
+}
+
+#photo {
+  height: 5%;
+  width: 5%;
+}
+
+

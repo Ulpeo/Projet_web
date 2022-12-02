@@ -1,0 +1,15 @@
+.meteo {
+    /*position: relative;*/
+    width: 271px;
+    height: 191px;
+    /*left: 980px;
+    top: 120px;*/
+
+    background: #FFFFFF;
+    box-shadow: 0px 9px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    margin:2%;
+    padding:2%;
+    padding-top: 1%;
+}
