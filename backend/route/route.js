@@ -4,11 +4,13 @@ const piloteTemplate = require('../model/piloteModel');
 const {request, response} = require("express");
 
 
-router.post('/pilote',(req, res)=>{
+router.post('/Pilote',(req, res)=>{
    const newPilote = new piloteTemplate({
        Identifier:request.body.Identifier,
        firstName:request.body.firstName,
        lastName:request.body.lastName,
+       nextMission:request.body.nextMission,
+       previousMission:request.body.previousMission,
        available:request.body.available,
    });
    newPilote.save()

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const piloteTemplate = new mongoose.Schema({
     Identifier:{
-        type: int,
+        type: Number,
         required:true
     },
     firstName: {
@@ -27,4 +27,4 @@ const piloteTemplate = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('myTable',piloteTemplate);
+module.exports = mongoose.model('Pilote',piloteTemplate,'Pilote');

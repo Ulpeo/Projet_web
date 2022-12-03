@@ -1,0 +1,11 @@
+POST http://localhost:28017/api/item
+Content-Type: application/json
+
+{"Identifier" : "4545",
+  "firstName": "matt",
+  "lastName": "jojo",
+  "nextMission": "03/12/2022",
+  "previous": "03/12/2022",
+  "available": "yes"}
+
+###
