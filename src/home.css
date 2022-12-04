@@ -57,5 +57,12 @@ code {
 }
 
 
+/*Si l'écran devient un smartphone*/
+
+@media screen and (max-width: 800px) {
+  .map {
+    display:none;
+  }
+}
 
 
