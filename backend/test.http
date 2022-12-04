@@ -1,11 +1,13 @@
-POST http://localhost:28017/api/item
+POST http://localhost:3000/settings
 Content-Type: application/json
 
-{"Identifier" : "4545",
-  "firstName": "matt",
-  "lastName": "jojo",
-  "nextMission": "03/12/2022",
-  "previous": "03/12/2022",
-  "available": "yes"}
+{
+  "Identifier" : "9586",
+  "First name": "matt",
+  "Last name": "jojo",
+  "Next Mission": "03/12/2022",
+  "Previous": "03/12/2022",
+  "available": "yes"
+}
 
 ###
