@@ -27,4 +27,4 @@ const piloteTemplate = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('Web_Project',piloteTemplate,'Pilote');
+module.exports = mongoose.model('Pilote',piloteTemplate);

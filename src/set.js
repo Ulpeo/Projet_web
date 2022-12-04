@@ -72,7 +72,7 @@ class Set extends Component {
             available: this.state.available
         }
 
-        axios.post('http://localhost:3001/app/Pilote',registered)
+        axios.post('http://localhost:3000/settings/',registered)
             .then(response => console.log(response.data))
 this.state({
     Identifier: '',

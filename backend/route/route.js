@@ -4,7 +4,7 @@ const piloteTemplateCopy = require('../model/piloteModel');
 const {request, response} = require("express");
 
 
-router.post('/Pilote',(req, res)=>{
+router.post('/settings',(req, res)=>{
    const newPilote = new piloteTemplateCopy({
        Identifier:req.body.Identifier,
        firstName:req.body.firstName,
