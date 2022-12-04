@@ -2,7 +2,7 @@ import './navbar.css';
 import logo from './Group2.svg';
 import photo from './photo.svg';
 import settings from './settings.svg';
-import './police.css';
+import '../Polices/police.css';
 
 function Navbar() {
   return (

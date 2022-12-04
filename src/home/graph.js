@@ -1,5 +1,5 @@
 import './graph.css';
-import './police.css';
+import '../Polices/police.css';
 
 function Graph(){
     return(

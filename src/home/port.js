@@ -1,5 +1,5 @@
 import './port.css';
-import './police.css';
+import '../Polices/police.css';
 
 function Port(){
     return(

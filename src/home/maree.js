@@ -1,5 +1,5 @@
 import './maree.css';
-import './police.css';
+import '../Polices/police.css';
 
 function Maree(){
     return(

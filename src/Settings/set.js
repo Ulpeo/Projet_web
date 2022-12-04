@@ -1,13 +1,18 @@
 import "./set.css"
-import "./police.css"
+import "../Polices/police.css"
 import image from "./loupe.png"
 import Modifpilote from "./Modifpilote"
 import Modifboat from "./Modifboat.js";
+import Modifcont from "./Modifcont";
 
 function Set() {
+
     return (
         <div className="back">
             <div className="left">
+                <button>Bateaux</button>
+                <button>Pilotes</button>
+                <button>Containers</button>
                 <form>
                     <label className="searchclass">
 
@@ -18,11 +23,11 @@ function Set() {
             </div>
             <div className="right">
                 <h2 className="alata">Modifier les informations</h2>
-                <Modifboat/>
-                
-                    </div>
-                    </div>
-                    )
+                <Modifcont />
+
+            </div>
+        </div>
+    )
 }
 
-                    export default Set;
+export default Set;
