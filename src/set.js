@@ -1,6 +1,7 @@
 import "./set.css"
 import "./police.css"
 import image from "./loupe.png"
+
 import Modifpilote from "./Modifpilote"
 import Modifboat from "./Modifboat.js";
 
@@ -26,3 +27,4 @@ function Set() {
 }
 
                     export default Set;
+
