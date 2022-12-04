@@ -1,11 +1,13 @@
+
+
 .back {
     display: flex;
     flex-wrap: wrap;
 
-    height: 609px;
-    width: 1424px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    width: 95%;
+    margin-right:auto;
+    margin-left:auto;
     margin-bottom: 2%;
 
 
@@ -23,17 +25,4 @@ input[type=text] {
     background-color: #F3F3F3;
     border-radius: 25px;
     border: 2px solid #F3F3F3;
-}
-
-
-.modifier {
-    background-color: #F99A41;
-    max-height: 10%;
-    max-width: 20%;
-    
-    border-radius: 30px;
-    border-color: #F99A41;
-
-    color:white;
-
 }

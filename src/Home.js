@@ -5,7 +5,7 @@ import Maree from './maree';
 import Port from './port';
 import Graph from './graph';
 import Navbar from './Navbar';
-import './index.css';
+import './home.css';
 
 function Home(){
     return(
