@@ -1,4 +1,4 @@
-import "./modifpilote.css";
+
 
 function Modifpilote() {
     return (
@@ -41,7 +41,7 @@ function Modifpilote() {
             </label>
             <br />
 
-            <input className="modifier" type="submit" value="Modifier" />
+            <input className="bouton" type="submit" value="Modifier" />
         </form>
 
 

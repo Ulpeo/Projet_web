@@ -34,7 +34,7 @@ function Modifcont(){
        </label>
        <br />
 
-       <input className="modifier" type="submit" value="Modifier" />
+       <input className="bouton" type="submit" value="Modifier" />
    </form>
     )
 }

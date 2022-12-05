@@ -25,4 +25,46 @@ input[type=text] {
     background-color: #F3F3F3;
     border-radius: 25px;
     border: 2px solid #F3F3F3;
+
+    
 }
+
+
+.boutons{
+    display:flex;
+    flex-wrap:nowrap;
+
+}
+
+.bouton {
+    background-color: #F99A41;
+    height: 100%;
+    width: 100%;
+    
+    border-radius: 30px;
+    border-color: #F99A41;
+
+  
+
+    color:white;
+    
+
+}
+
+.marg{
+    margin:5%;
+    padding: 5%;
+}
+
+.right{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.searchclass{
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+   
+}
+
