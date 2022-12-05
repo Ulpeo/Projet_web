@@ -12,7 +12,9 @@ function Home() {
     <div>
       <Navbar />
       <div className="container">
-        <div className="ma"><Map /></div>
+        <div className="ma">
+          <Map/>
+        </div>
         <div className="child">
           <div className="pi"><Pilote /></div>
           <div className="groupe"><div className="mm">
