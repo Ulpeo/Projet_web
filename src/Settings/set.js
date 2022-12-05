@@ -5,13 +5,17 @@ import image from "./loupe.png"
 import Modifpilote from "./Modifpilote"
 import Modifboat from "./Modifboat.js";
 import Modifcont from "./Modifcont";
+import axios from 'axios';
+import { map } from 'lodash';
 import {Component, useState} from "react";
 
+const BACKEND_BASE_URL = "http://localhost:3000/pilotes/";
 class Set extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: 'Modifpilote'
+            type: 'Modifpilote',
+
         }
     }
 
