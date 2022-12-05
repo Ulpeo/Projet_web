@@ -38,9 +38,11 @@ class Set extends Component {
             return (
                 <div className="back">
                     <div className="left">
-                        <button onClick={this.modifBoat.bind(this)}>Bateaux</button>
-                        <button onClick={this.modifPilote.bind(this)}>Pilotes</button>
-                        <button onClick={this.modifCont.bind(this)}>Containers</button>
+                    <div className="boutons">
+                        <div className="marg"><button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button></div>
+                        <div className ="marg"><button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button></div>
+                        <div className="marg"><button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button></div>
+                        </div>
                         <form>
                             <label className="searchclass">
 
@@ -59,10 +61,12 @@ class Set extends Component {
             return (
                 <div className="back">
                     <div className="left">
-                        <button onClick={this.modifBoat.bind(this)}>Bateaux</button>
-                        <button onClick={this.modifPilote.bind(this)}>Pilotes</button>
-                        <button onClick={this.modifCont.bind(this)}>Containers</button>
-                        <form>
+                    <div className="boutons">
+                        <div className="marg"><button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button></div>
+                        <div className ="marg"><button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button></div>
+                        <div className="marg"><button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button></div>
+                        </div>
+                        <form className="loupe">
                             <label className="searchclass">
 
                                 <input type="text" name="search" placeholder="Rechercher"/>
@@ -80,9 +84,12 @@ class Set extends Component {
             return (
                 <div className="back">
                     <div className="left">
-                        <button onClick={this.modifBoat.bind(this)}>Bateaux</button>
-                        <button onClick={this.modifPilote.bind(this)}>Pilotes</button>
-                        <button onClick={this.modifCont.bind(this)}>Containers</button>
+                        <div className="boutons">
+                        <div className="marg"><button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button></div>
+                        <div className ="marg"><button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button></div>
+                        <div className="marg"><button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button></div>
+                        </div>
+                        
                         <form>
                             <label className="searchclass">
 
@@ -90,6 +97,7 @@ class Set extends Component {
                             </label>
                             <input type="image" src={image} value="clicImage"/>
                         </form>
+                        
                     </div>
                     <div className="right">
                         <h2 className="alata">Modifier les informations</h2>
