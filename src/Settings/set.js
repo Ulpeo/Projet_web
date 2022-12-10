@@ -5,11 +5,16 @@ import image from "./loupe.png"
 import Modifpilote from "./Modifpilote"
 import Modifboat from "./Modifboat.js";
 import Modifcont from "./Modifcont";
-import axios from 'axios';
-import { map } from 'lodash';
+
+import pilote from "../home/pilote";
+//import boat from "../home/boat";
+//import boat from "../home/container";
+
+import PiloteSet from "./piloteSet";
 import {Component, useState} from "react";
 
 const BACKEND_BASE_URL = "http://localhost:3000/pilotes/";
+
 class Set extends Component {
     constructor(props) {
         super(props);
@@ -42,10 +47,16 @@ class Set extends Component {
             return (
                 <div className="back">
                     <div className="left">
-                    <div className="boutons">
-                        <div className="marg"><button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button></div>
-                        <div className ="marg"><button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button></div>
-                        <div className="marg"><button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button></div>
+                        <div className="boutons">
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button>
+                            </div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button>
+                            </div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button>
+                            </div>
                         </div>
                         <form>
                             <label className="searchclass">
@@ -54,21 +65,33 @@ class Set extends Component {
                             </label>
                             <input type="image" src={image} value="clicImage"/>
                         </form>
+                        <PiloteSet/>
+                        <div className={'piloteDisplay'}>
+
+                        </div>
+
                     </div>
+
                     <div className="right">
                         <h2 className="alata">Modifier les informations</h2>
                         <Modifpilote/>
                     </div>
                 </div>
             )
-        }else if (this.state.type === 'Modifboat'){
+        } else if (this.state.type === 'Modifboat') {
             return (
                 <div className="back">
                     <div className="left">
-                    <div className="boutons">
-                        <div className="marg"><button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button></div>
-                        <div className ="marg"><button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button></div>
-                        <div className="marg"><button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button></div>
+                        <div className="boutons">
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button>
+                            </div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button>
+                            </div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button>
+                            </div>
                         </div>
                         <form className="loupe">
                             <label className="searchclass">
@@ -77,6 +100,8 @@ class Set extends Component {
                             </label>
                             <input type="image" src={image} value="clicImage"/>
                         </form>
+                        // afficher les bateaux en dessous de la recherche avec le bouton delete
+                        <button text={'Delete movie'} onClick={() => deleteMovie()}/>
                     </div>
                     <div className="right">
                         <h2 className="alata">Modifier les informations</h2>
@@ -84,16 +109,22 @@ class Set extends Component {
                     </div>
                 </div>
             )
-        }else if (this.state.type === 'Modifcont'){
+        } else if (this.state.type === 'Modifcont') {
             return (
                 <div className="back">
                     <div className="left">
                         <div className="boutons">
-                        <div className="marg"><button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button></div>
-                        <div className ="marg"><button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button></div>
-                        <div className="marg"><button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button></div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifBoat.bind(this)}>Bateaux</button>
+                            </div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifPilote.bind(this)}>Pilotes</button>
+                            </div>
+                            <div className="marg">
+                                <button className="bouton" onClick={this.modifCont.bind(this)}>Containers</button>
+                            </div>
                         </div>
-                        
+
                         <form>
                             <label className="searchclass">
 
@@ -101,7 +132,7 @@ class Set extends Component {
                             </label>
                             <input type="image" src={image} value="clicImage"/>
                         </form>
-                        
+
                     </div>
                     <div className="right">
                         <h2 className="alata">Modifier les informations</h2>

@@ -1,16 +1,56 @@
-const express = require('express');
-const dotenv = require('dotenv').config()
-const app = express();
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var cors = require('cors');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var pilotesRouter = require('./routes/pilotes');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.use(cors());
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/Pilote', pilotesRouter);//chemin
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+});
+
 const mongoose = require('mongoose');
-const routeUrl = require('./route/pilotes');
-const cors = require('cors');
-const Pilote = require('./model/piloteModel');
 
-/*app.get('app/home/pilote',(req, res)=>{
-    res.json({message:'BET'})
-})*/
+mongoose.Promise = global.Promise;
+const dbName = 'Web_Project';  // Nom de votre BDD
+const dbUrl = `mongodb://0.0.0.0:27017/${dbName}`;
 
-app.use('/app/home',require('./route/pilotes'))
-app.use('app/home',require('./route/boats'))
-app.use('app/home',require('./route/containers'))
-app.listen(5000, () => console.log("server is up and running on port 3000"))
+// Connecting to the db
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true
+});
+
+module.exports = app;

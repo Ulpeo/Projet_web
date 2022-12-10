@@ -1,12 +1,23 @@
-
+/*//import pilote from "./pilote";
+//import axios from 'axios';
+//import { map } from 'lodash';
+const BACKEND_BASE_URL = "http://localhost:3000/Pilote/";
+*/
+import piloteSet from './piloteSet'
 
 function Modifpilote() {
+    /*this.modifyPilote = ()=>{
+        axios.post(url).then((data)=>this.getList());
+    }*/
+    /*this.addPilote = ()=>{
+        axios.put(url).then((data)=>this.getList());
+    }*/
     return (
         <form>
 
             <label className="alata">
                 ID :
-                <input type="text" name="id" placeholder="ID" />
+                <input type="text" name="addId" placeholder="ID" onChange={this.addPiloteInputChange} />
             </label>
             <br />
             <label className="alata">
