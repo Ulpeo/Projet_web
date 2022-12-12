@@ -1,13 +1,6 @@
-POST http://localhost:3000/settings
+GET http://localhost:3000/Pilote
 Content-Type: application/json
 
-{
-  "Identifier" : "9586",
-  "First name": "matt",
-  "Last name": "jojo",
-  "Next Mission": "03/12/2022",
-  "Previous": "03/12/2022",
-  "available": "yes"
-}
+
 
 ###

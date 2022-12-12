@@ -13,7 +13,7 @@ function Meteo() {
     return (
        // <div className="meteo" onLoad="loadWeather()">
 
-            <div className="container" onLoad={loadWeather}>
+            <div className="container" >
                 <div className="card-deck mb-3 text-center">
                     <div className="card mb-4 shadow-sm offset-sm-1">
                         <div className="card-header">
