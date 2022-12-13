@@ -32,13 +32,15 @@ function Pilote(){
     return(
 
         <div className="pilote">
-
-            <div className={'infosPilote'}>
-                {this.renderInfo('Identifier',Identifier)}
-                {this.renderInfo('Fname',firstName)}
-                {this.renderInfo('Lname',lastName)}
-                {this.renderInfo('available',available)}
-            </div>
+             <h2 className="alata">Pilotes</h2>
+                <p>coucou je suis là</p>
+                <div className={'infosPilote'}>
+               
+               {this.renderInfo('Identifier',Identifier)}
+               {this.renderInfo('Fname',firstName)}
+               {this.renderInfo('Lname',lastName)}
+               {this.renderInfo('available',available)}
+           </div>
 
 
         </div>

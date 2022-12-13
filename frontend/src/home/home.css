@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -20,21 +20,21 @@ code {
   justify-items: flex-start;
   align-items: flex-start;
 
-  margin:0;
- 
+  margin: 0;
+
 
 }
 
-.child{
-  display:flex;
+.child {
+  display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin-left: 2%;
-  
+
 }
 
-.mm{
+.mm {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -43,20 +43,25 @@ code {
   max-width: 50%;
   max-height: 50%;
   /*margin:1%;*/
-  
+
 }
 
 
-.pi{
-  
+.pi {
+
   display: flex;
   justify-content: flex-start;
- 
+
 }
 
-.gr{
+.po {
   display: flex;
-  
+  margin-top: 10%;
+}
+
+.gr {
+  display: flex;
+
 }
 
 
@@ -64,8 +69,6 @@ code {
 
 @media screen and (max-width: 800px) {
   .map {
-    display:none;
+    display: none;
   }
 }
-
-

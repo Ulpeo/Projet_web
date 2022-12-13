@@ -1,6 +1,6 @@
 import './graph.css';
 import '../Polices/police.css';
-/*import {Bar} from "react-chartjs-2";
+import {Bar} from "cha";
 
 const dat={
     labels:["Janvier", "Février","Mars"],
