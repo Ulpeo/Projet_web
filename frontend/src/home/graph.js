@@ -1,16 +1,6 @@
 import './graph.css';
 import '../Polices/police.css';
-import {Bar} from "cha";
 
-const dat={
-    labels:["Janvier", "Février","Mars"],
-    datasets:[
-        {
-            label:"Nombre containers",
-            data:["100","123","240"],
-        },
-    ],
-}*/
 
 function Graph(){
     return(
