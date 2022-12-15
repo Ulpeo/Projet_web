@@ -1,6 +1,6 @@
 import './graph.css';
 import '../Polices/police.css';
-import {Bar} from "cha";
+//import {Bar} from "cha";
 
 const dat={
     labels:["Janvier", "Février","Mars"],
@@ -10,7 +10,7 @@ const dat={
             data:["100","123","240"],
         },
     ],
-}*/
+}
 
 function Graph(){
     return(

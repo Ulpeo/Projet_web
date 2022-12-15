@@ -14,11 +14,11 @@ const piloteTemplate = new mongoose.Schema({
         required: true
     },
     nextMission:{
-        type: Date,
+        type: String,
         required: false
     },
     previousMission: {
-        type: Date,
+        type: String,
         required: false
     },
     available: {

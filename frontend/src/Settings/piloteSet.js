@@ -1,8 +1,6 @@
 import '../home/pilote.css';
-import {Button} from "../stories/Button";
-//import { map, split } from 'lodash';
-//import React from 'react';
 
+import React from "react";
 /* Data reçu :
 -Identifier
 -Fname
@@ -11,41 +9,44 @@ import {Button} from "../stories/Button";
 -PreM
 -Available
  */
+/*getList= () => {
+    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.movies && this.setState({ movies: data.data.movies }));
+}*/
 
-//affiche toutes les data pour modifier
-
-
-function piloteSet(){
-
-    this.props = undefined;
+//affiche seulement les données nécessaire pour le dashboard
 
 
-    const {infos, deletePilote} = this.props;
-    this.renderInfo = function (label, info) {
+
+
+
+export default class PiloteSet extends React.Component {
+    renderInfo(label, info) {
         return (<div className='infoLine'>
             <div className='infoLabel'>{label}</div>
             <div className='info'>{info}</div>
         </div>);
     }
-    const {Identifier, firstName,lastName, nextMission,previousMission,available} = infos;
-    return(
 
-        <div className="pilote">
-            <h2 className="alata">Pilotes</h2>
 
-            <img src={"iconPilote"} alt={'icon'}/>
-            <div className={'infosPilote'}>
-            {this.renderInfo('Identifier',Identifier)}
-            {this.renderInfo('Fname',firstName)}
-            {this.renderInfo('Lname',lastName)}
-            {this.renderInfo('nextMission',nextMission)}
-            {this.renderInfo('previousMission',previousMission)}
-            {this.renderInfo('available',available)}
-        </div>
-            <button text={'Delete movie'} onClick={() => deletePilote(Identifier)}/>
 
-        </div>
-    )
+    render() {
+        const { infos, deletePilote} = this.props;
+        const {id, Identifier, firstName, lastName, nextMission, previousMission, available } = infos;
+
+
+        return (
+            <div className='pilote'>
+
+                <div className='infos'>
+                    {this.renderInfo('Identifier', Identifier)}
+                    {this.renderInfo('firstName', firstName)}
+                    {this.renderInfo('lastName', lastName)}
+                    {this.renderInfo('nextMission', nextMission)}
+                    {this.renderInfo('prevousMission', previousMission)}
+                    {this.renderInfo('available',available)}
+                </div>
+                <button text={'Delete pilote'} onClick={() => deletePilote(id)} />
+            </div>)
+    }
 }
 
-export default piloteSet;

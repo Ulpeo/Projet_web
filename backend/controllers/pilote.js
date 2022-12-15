@@ -53,12 +53,12 @@ exports.addPilote = (req, res) => {
                 const {Identifier, firstName, lastName, nextMission, previousMission, available} = data.data;
                 const newPilote = {
                     // _id: _.uniqueId(), // Fait par Mongodb
-                    Identifier: Identifier,
-                    firstName: firstName,
-                    lastName: lastName,
-                    nextMission: nextMission, //date
-                    previousMission: previousMission, //date
-                    available: available,
+                    Identifier: 'Identifier',
+                    firstName: 'firstName',
+                    lastName: 'lastName',
+                    nextMission: '15/12/2022', //date
+                    previousMission: '15/12/2022', //date
+                    available: 'yes',
 
                 }
                 Pilotes.create(newPilote).then(pilote => {

@@ -1,5 +1,37 @@
-GET http://localhost:3000/Pilote
+PUT http://localhost:3001/Pilote
 Content-Type: application/json
+
+
+{
+  "_id": {
+    "$oid": "639099c0ce991c214aed3c7d"
+  },
+  "Identifier": 9586,
+  "firstName": "test",
+  "lastName": "test",
+  "nextMission": {
+    "$date": {
+      "$numberLong": "1657576800000"
+    }
+  },
+  "previousMission": {
+    "$date": {
+      "$numberLong": "1657576800000"
+    }
+  },
+  "available": "yes",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670420928315"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670420928315"
+    }
+  },
+  "__v": 0
+}
 
 
 

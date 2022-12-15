@@ -1,7 +1,6 @@
 import './pilote.css';
-//import { map, split } from 'lodash';
-//import React from 'react';
 
+import React from "react";
 /* Data reçu :
 -Identifier
 -Fname
@@ -16,12 +15,50 @@ import './pilote.css';
 
 //affiche seulement les données nécessaire pour le dashboard
 
+
+
+
+
+export default class Pilote extends React.Component {
+    renderInfo(label, info) {
+        return (<div className='infoLine'>
+            <div className='infoLabel'>{label}</div>
+            <div className='info'>{info}</div>
+        </div>);
+    }
+
+
+
+    render() {
+        const { infos} = this.props;
+        const { Identifier, firstName, lastName, nextMission, previousMission, available } = infos;
+
+
+        return (
+            <div className='pilote'>
+
+                <div className='infos'>
+                    {this.renderInfo('Identifier', Identifier)}
+                    {this.renderInfo('firstName', firstName)}
+                    {this.renderInfo('lastName', lastName)}
+                    {this.renderInfo('nextMission', nextMission)}
+                    {this.renderInfo('prevousMission', previousMission)}
+                    {this.renderInfo('available',available)}
+                </div>
+
+            </div>)
+    }
+}
+
+
+/*
+
 function Pilote(){
 
-    this.props = undefined;
+   
 
 
-    const {infos, deletePilote} = this.props;
+    const {infos} = this.use;
     this.renderInfo = function (label, info) {
         return (<div className='infoLine'>
             <div className='infoLabel'>{label}</div>
@@ -33,7 +70,7 @@ function Pilote(){
 
         <div className="pilote">
              <h2 className="alata">Pilotes</h2>
-                <p>coucou je suis là</p>
+
                 <div className={'infosPilote'}>
                
                {this.renderInfo('Identifier',Identifier)}
@@ -47,4 +84,4 @@ function Pilote(){
     )
 }
 
-export default Pilote;
+export default Pilote;*/
